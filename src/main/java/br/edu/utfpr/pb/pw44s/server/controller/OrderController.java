@@ -68,8 +68,7 @@ public class OrderController {
     @PostMapping
     public ResponseEntity<OrderDTO> create(@Valid @RequestBody OrderDTO orderDTO) {
         Order order = orderService.createOrder(orderDTO);
-        
-        // Mapeia a resposta
+
         OrderDTO responseDTO = new OrderDTO();
         responseDTO.setId(order.getId());
         responseDTO.setDateOrder(order.getDateOrder());

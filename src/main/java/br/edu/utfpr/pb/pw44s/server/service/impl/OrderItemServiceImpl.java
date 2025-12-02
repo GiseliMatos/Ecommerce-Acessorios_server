@@ -96,5 +96,4 @@ public class OrderItemServiceImpl extends CrudServiceImpl<OrderItem, Long> imple
         }
         items.forEach(orderItemRepository::delete);
     }
-
 }

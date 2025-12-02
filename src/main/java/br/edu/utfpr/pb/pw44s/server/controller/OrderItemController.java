@@ -34,20 +34,17 @@ public class OrderItemController extends CrudController<OrderItem, OrderItemDTO,
         return modelMapper;
     }
 
-    // Listar todos os itens de um pedido
     @GetMapping("order/{orderId}")
     public ResponseEntity<List<OrderItem>> findAllByOrder(@PathVariable Long orderId) {
         return ResponseEntity.ok(orderItemService.findAllByOrderId(orderId));
     }
 
-    // Listar item específico de um pedido
     @GetMapping("order/{orderId}/product/{productId}")
     public ResponseEntity<List<OrderItem>> findByOrderAndProduct(@PathVariable Long orderId,
                                                                  @PathVariable Long productId) {
         return ResponseEntity.ok(orderItemService.findAllByOrderIdAndProductId(orderId, productId));
     }
 
-    // Deletar item de um pedido
     @DeleteMapping("order/{orderId}/product/{productId}")
     public ResponseEntity<Void> deleteByOrderAndProduct(@PathVariable Long orderId,
                                                         @PathVariable Long productId) {
@@ -55,7 +52,6 @@ public class OrderItemController extends CrudController<OrderItem, OrderItemDTO,
         return ResponseEntity.noContent().build();
     }
 
-    // Adicionar quantidade a um item existente
     @PostMapping("order/{orderId}/product/{productId}/add")
     public ResponseEntity<OrderItem> addQuantity(@PathVariable Long orderId,
                                                  @PathVariable Long productId,

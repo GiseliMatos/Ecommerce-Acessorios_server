@@ -7,7 +7,7 @@ INSERT INTO tb_category (id, name) VALUES (5, 'Conjuntos');
 
 -- User - password: 123
 INSERT INTO tb_user(display_name, username, password) VALUES ('Administrador', 'admin','$2a$10$.PVIfB07x.SfMYTcToxL0.yxcLWU0GbS2NUO1W1QAvqMm/TsFhVem');
-INSERT INTO tb_user(display_name, username, password) VALUES ('Teste', 'test','$2a$10$.PVIfB07x.SfMYTcToxL0.yxcLWU0GbS2NUO1W1QAvqMm/TsFhVem');
+--INSERT INTO tb_user(display_name, username, password) VALUES ('Teste', 'test','$2a$10$.PVIfB07x.SfMYTcToxL0.yxcLWU0GbS2NUO1W1QAvqMm/TsFhVem');
 
 -- COLAR (ID: 1)
 INSERT INTO tb_product (name, description, price, url_img, category_id)
@@ -19,7 +19,7 @@ VALUES ('Colar Snake', 'Colar de corrente com design de cobra (snake).', 99.90, 
 INSERT INTO tb_product (name, description, price, url_img, category_id)
 VALUES ('Colar com Símbolo Masculino', 'Colar curto com símbolo masculino. Banho Dourado.', 39.90, 'https://morana.vtexassets.com/arquivos/ids/174863-1200-auto?v=638025861740200000&width=1200&height=auto&aspect=true', 1);
 INSERT INTO tb_product (name, description, price, url_img, category_id)
-VALUES ('Colar com Cristais e Pedras de Vidro', 'Acessório de corrente com aplicação de cristais e pedras de vidro.', 59.90, 'https://morana.vtexassets.com/arquivos/ids/172398-1200-auto?v=637998228738200000&width=1200&height=auto&aspect=true', 1);
+VALUES ('Colar com Cristais e Pedras', 'Acessório de corrente com aplicação de cristais e pedras de vidro.', 59.90, 'https://morana.vtexassets.com/arquivos/ids/172398-1200-auto?v=637998228738200000&width=1200&height=auto&aspect=true', 1);
 INSERT INTO tb_product (name, description, price, url_img, category_id)
 VALUES ('Colar com Pingente de Signo Áries', 'Colar com pingente redondo do signo de Áries.', 59.90, 'https://morana.vtexassets.com/arquivos/ids/227660-1200-auto?v=638699561656300000&width=1200&height=auto&aspect=true', 1);
 INSERT INTO tb_product (name, description, price, url_img, category_id)
@@ -101,7 +101,7 @@ VALUES ('Anel Cravejado', 'Anel de festa, completamente cravejado com zircônias
 INSERT INTO tb_product (name, description, price, url_img, category_id)
 VALUES ('Conjunto de Pérola e Zircônias', 'Conjunto (colar e brinco) com pérolas e zircônias. Banho Prateado.', 99.90, 'https://morana.vtexassets.com/arquivos/ids/254224-1200-auto?v=638965875044230000&width=1200&height=auto&aspect=true', 5);
 INSERT INTO tb_product (name, description, price, url_img, category_id)
-VALUES ('Conjunto Trabalhado com Pedra de Vidro', 'Conjunto trabalhado com zircônias e pedra de vidro. Banho Dourado.', 79.90, 'https://morana.vtexassets.com/arquivos/ids/254644-1200-auto?v=638965876892200000&width=1200&height=auto&aspect=true', 5);
+VALUES ('Conjunto com Pedra de Vidro', 'Conjunto trabalhado com zircônias e pedra de vidro. Banho Dourado.', 79.90, 'https://morana.vtexassets.com/arquivos/ids/254644-1200-auto?v=638965876892200000&width=1200&height=auto&aspect=true', 5);
 INSERT INTO tb_product (name, description, price, url_img, category_id)
 VALUES ('Conjunto Olho Grego', 'Conjunto (colar e brinco) olho grego cravejado. Banho Dourado.', 89.90, 'https://morana.vtexassets.com/arquivos/ids/257386-1200-auto?v=638981387322100000&width=1200&height=auto&aspect=true', 5);
 INSERT INTO tb_product (name, description, price, url_img, category_id)
@@ -120,34 +120,34 @@ INSERT INTO tb_product (name, description, price, url_img, category_id)
 VALUES ('Conjunto Cravejado', 'Conjunto completamente cravejado com zircônias. Banho Dourado.', 129.90, 'https://morana.vtexassets.com/arquivos/ids/255775-1200-auto?v=638972802564630000&width=1200&height=auto&aspect=true', 5);
 
 -- Endereço do Administrador
-INSERT INTO tb_address (street, complement, zip_code, city, state, country, user_id)
-VALUES ('Av. Brasil, 1000', 'Ap 101', '85501-000', 'Pato Branco', 'Paraná', 'Brasil', 1);
+--INSERT INTO tb_address (street, complement, zip_code, city, state, country, user_id)
+--VALUES ('Av. Brasil, 1000', 'Ap 101', '85501-000', 'Pato Branco', 'Paraná', 'Brasil', 1);
 
-INSERT INTO tb_address (street, complement, zip_code, city, state, country, user_id)
-VALUES ('Rua das Flores, 250', NULL, '80030-120', 'Curitiba', 'Paraná', 'Brasil', 1);
+--INSERT INTO tb_address (street, complement, zip_code, city, state, country, user_id)
+--VALUES ('Rua das Flores, 250', NULL, '80030-120', 'Curitiba', 'Paraná', 'Brasil', 1);
 
 -- Endereço do Usuário Teste
-INSERT INTO tb_address (street, complement, zip_code, city, state, country, user_id)
-VALUES ('Rua Central, 55', 'Casa', '85810-230', 'Foz do Iguaçu', 'Paraná', 'Brasil', 2);
+--INSERT INTO tb_address (street, complement, zip_code, city, state, country, user_id)
+--VALUES ('Rua Central, 55', 'Casa', '85810-230', 'Foz do Iguaçu', 'Paraná', 'Brasil', 2);
 
 
 
 -- Order
 -- Pedido do Administrador (usuário id = 1, endereço id = 1)
-INSERT INTO tb_order (date_order, total_price, user_id, address_id, forma_pagamento, forma_entrega)
-VALUES ('2025-09-27T18:30:00', 5298.80, 1, 1, 'CARTAO_CREDITO', 'ENTREGA_NORMAL');
+--INSERT INTO tb_order (date_order, total_price, user_id, address_id, forma_pagamento, forma_entrega)
+--VALUES ('2025-09-27T18:30:00', 5298.80, 1, 1, 'CARTAO_CREDITO', 'ENTREGA_NORMAL');
 
 -- Pedido do Usuário Teste (usuário id = 2, endereço id = 3)
-INSERT INTO tb_order (date_order, total_price, user_id, address_id, forma_pagamento, forma_entrega)
-VALUES ('2025-09-27T19:00:00', 4299.00, 2, 3, 'PIX', 'ENTREGA_EXPRESSA');
+--INSERT INTO tb_order (date_order, total_price, user_id, address_id, forma_pagamento, forma_entrega)
+--VALUES ('2025-09-27T19:00:00', 4299.00, 2, 3, 'PIX', 'ENTREGA_EXPRESSA');
 
 --Order Itens
 -- Itens do pedido do Administrador (pedido id = 1)
-INSERT INTO tb_order_item (order_id, product_id, price, quantity)
-VALUES (1, 1, 4999.90, 1); -- Smartphone Galaxy S24
-INSERT INTO tb_order_item (order_id, product_id, price, quantity)
-VALUES (1, 4, 399.90, 1); -- Mouse Gamer Logitech G502
+--INSERT INTO tb_order_item (order_id, product_id, price, quantity)
+--VALUES (1, 1, 4999.90, 1); -- Smartphone Galaxy S24
+--INSERT INTO tb_order_item (order_id, product_id, price, quantity)
+--VALUES (1, 4, 399.90, 1); -- Mouse Gamer Logitech G502
 
 -- Itens do pedido do Usuário Teste (pedido id = 2)
-INSERT INTO tb_order_item (order_id, product_id, price, quantity)
-VALUES (2, 2, 4299.00, 1); -- Notebook Acer Aspire 15
+--INSERT INTO tb_order_item (order_id, product_id, price, quantity)
+--VALUES (2, 2, 4299.00, 1); -- Notebook Acer Aspire 15
